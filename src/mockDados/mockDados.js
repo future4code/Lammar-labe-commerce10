@@ -17,8 +17,6 @@ export const produtos = [
     
 ]
 
-
-
 // import Robo from './img/robo';
 // import Lego from './img/lego';
 // import Sistema from './img/sistemaSolar';

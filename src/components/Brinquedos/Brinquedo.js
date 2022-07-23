@@ -20,6 +20,8 @@ const BotaoAdicionar = styled.button`
     padding: 5 px;
     margin-left: 15px;
     margin-bottom: 15px;
+
+    cursor: pointer;
     
 `
 
