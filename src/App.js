@@ -1,11 +1,11 @@
-import React from 'react';
-import EcommerceFilter from "../src/components/filter/EcommerceFilter"
+
+import EcommerceFilter from "../src/components/filter/EcommerceFilter";
 import React, {useState} from 'react';
 import Card from './components/Card/Card';
-import RemoverItens from './components/RemoverItens/RemoverItens'
+import RemoverItens from './components/RemoverItens/RemoverItens';
 import Header from './components/Header/Header';
 import Ordenacao from './Ordenacao/Ordenacao';
-import Header from './components/Header/Header';
+import { produtos } from '../../mockDados/mockDados';
 import './App.css';
 
 
@@ -13,6 +13,11 @@ import './App.css';
 function App() {
 
   const [cart, setCart] = useState ([])
+  const [produtos] = useState(produtos)
+  const [sortingParameter, setSortingParameter] = useState("nome")
+  const [order, setOrder] = useState("asc")
+
+
 
   function handleAddItemToCart(url, nome, valor, title){
     const itemObject = {url, nome, valor, title}
@@ -20,18 +25,32 @@ function App() {
   }
   
 
-
 // function handleAddItem (url, nome, valor) {
 //   const itemBrinq = {url, nome, valor}
 //   setCart(itemBrinq)
 // }
 
-  return (
-    <div className="App">
-
-    </div>
     
-  );
+        return (
+
+        <div className="App">
+            <Header/>
+            <Ordenacao
+              sortingParameter={sortingParameter}
+              order={order}
+
+              setSortingParameter={setSortingParameter}
+              setOrder={setOrder}
+              
+
+            />
+            <Card handleAdicionarItem={handleAddItem} />
+
+            
+        
+        </div>
+        )    
+   
 }
 
 
@@ -40,28 +59,13 @@ export default App;
 
 
 
-// import React from 'react';
-// import Card from './components/Card/Card';
 
 
-// // import styled from 'styled-components';
-
-// import './App.css';
-// // import { produtos } from './mockDados';
-
-// function App() {
-  
-// // const [cart, setCart] = useState ([])
-
-//   return (
-//     <div className="App">
-
-//       <Card/>
-      
-//     </div>
-    
-//   );
-// }
 
 
-// export default App;
+
+
+
+
+
+
