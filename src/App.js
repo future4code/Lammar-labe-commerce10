@@ -1,37 +1,36 @@
-<<<<<<< HEAD
 import React from 'react';
 import EcommerceFilter from "../src/components/filter/EcommerceFilter"
-=======
 import React, {useState} from 'react';
 import Card from './components/Card/Card';
-
-
-// import styled from 'styled-components';
-
->>>>>>> c767470aa77ba085b4734a707441217f38c75c9d
+import RemoverItens from './components/RemoverItens/RemoverItens'
+import Header from './components/Header/Header';
+import Ordenacao from './Ordenacao/Ordenacao';
+import Header from './components/Header/Header';
 import './App.css';
-// import { produtos } from './mockDados';
+
+
+
 
 function App() {
-  
-const [cart, setCart] = useState ([])
-console.log(cart)
 
-function handleAddItem (url, nome, valor) {
-  const itemBrinq = {url, nome, valor}
-  setCart(itemBrinq)
-  console.log([itemBrinq])
-}
+  const [cart, setCart] = useState ([])
+
+  function handleAddItemToCart(url, nome, valor, title){
+    const itemObject = {url, nome, valor, title}
+    setCart([...cart, itemObject])
+  }
+  
+
+
+
+// function handleAddItem (url, nome, valor) {
+//   const itemBrinq = {url, nome, valor}
+//   setCart(itemBrinq)
+// }
 
   return (
     <div className="App">
-<<<<<<< HEAD
-     <EcommerceFilter/>
-=======
 
-      <Card handleAdicionarItem={handleAddItem} />
-      
->>>>>>> c767470aa77ba085b4734a707441217f38c75c9d
     </div>
     
   );
