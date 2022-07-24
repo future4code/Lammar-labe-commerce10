@@ -11,6 +11,7 @@ const Principal = styled.main`
     display: flex;
     align-itens: center;
     justify-content: center;
+    
 
 `
 
@@ -20,6 +21,7 @@ const SectionCard = styled.section`
     display: flex;
     align-itens: center;
     justify-content: space-between;
+    flex wrap: wrap;
 
 `
 
