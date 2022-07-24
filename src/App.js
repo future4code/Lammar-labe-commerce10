@@ -1,16 +1,19 @@
 import React, {useState} from 'react';
 import Card from './components/Card/Card';
 
+import Ordenacao from './Ordenacao/Ordenacao';
 
-// import styled from 'styled-components';
+import Header from './components/Header/Header';
 
-import './App.css';
-// import { produtos } from './mockDados';
+
+
+
+
 
 function App() {
   
 const [cart, setCart] = useState ([])
-console.log(cart)
+const [sortingParameter, setSortingParameter] = useState("nome")
 
 function handleAddItem (url, nome, valor) {
   const itemBrinq = {url, nome, valor}
@@ -20,7 +23,11 @@ function handleAddItem (url, nome, valor) {
 
   return (
     <div className="App">
-
+      <Header/>
+      <Ordenacao
+        sortingParameter={sortingParameter}
+        setSortingParameter={setSortingParameter}
+      />
       <Card handleAdicionarItem={handleAddItem} />
       
     </div>
