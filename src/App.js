@@ -22,7 +22,6 @@ function App() {
   
 
 
-
 // function handleAddItem (url, nome, valor) {
 //   const itemBrinq = {url, nome, valor}
 //   setCart(itemBrinq)
