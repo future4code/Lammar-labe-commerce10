@@ -19,7 +19,8 @@ const Seleciona = styled.select`
         
 
 const Ordenacao = (props) => {
-
+        
+              
     return (
         <OrderContainer>
             <label for="sortingParameter">Ordenar por:</label>

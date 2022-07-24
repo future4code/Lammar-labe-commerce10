@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import LogoEc from './img/LogoECommerce.png';
 
 
 const HeaderView = styled.header`
@@ -41,13 +42,13 @@ margin-left: 15px;
 margin-bottom: 15px;
 `
 
-const Header = () => {
+
+const Header1 = () => {
 
     return(
     <HeaderView>
         <HeaderAbertura>
-
-            <img></img>
+            <img> src={LogoEc} alt="LogoECommerce</img>
             <h2>As melhores compras aqui!</h2>
             <BotaoHeader>Log in</BotaoHeader>
         </HeaderAbertura>
@@ -60,4 +61,4 @@ const Header = () => {
     )
 }
 
-export default Header;
+export default Header1;

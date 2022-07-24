@@ -32,7 +32,7 @@ const Card = ({handleAddItemToCart}) => {
             <SectionCard>
                 {produtos
                 .sort((currentProduto, nextProduto)=>{
-                    switch(sortinParameter){
+                    switch(sortingParameter){
                         case "valor":
                             return currentProduto.valor - nextProduto.valor
                         default:
@@ -63,17 +63,3 @@ const Card = ({handleAddItemToCart}) => {
 
 export default Card;
 
-
-
-
-{/* <SectionCard>
-                {produtos.map((produto,index) => (
-                    <Brinquedo 
-                        url={produto.url} 
-                        nome={produto.nome} 
-                        valor={produto.valor}
-                        handleAddItemToCart={handleAddItemToCart}
-                    />
-                ))}
-                          
-            </SectionCard> */}
