@@ -3,8 +3,12 @@ import Card from './components/Card/Card';
 import RemoverItens from './components/RemoverItens/RemoverItens'
 import Header from './components/Header/Header';
 
+import Ordenacao from './Ordenacao/Ordenacao';
 
-import './App.css';
+import Header from './components/Header/Header';
+
+
+
 
 
 
@@ -20,6 +24,7 @@ function App() {
   
 
 
+
 // function handleAddItem (url, nome, valor) {
 //   const itemBrinq = {url, nome, valor}
 //   setCart(itemBrinq)
@@ -27,16 +32,6 @@ function App() {
 
   return (
     <div className="App">
-
-           
-      <div>
-      <Card handleAddItemToCart={handleAddItemToCart}/>
-      </div>
-      
-      <div>
-      <Header />
-      <RemoverItens cart={cart} />
-      </div>
 
       
     </div>
