@@ -61,15 +61,16 @@ const Valor = styled.h3`
     
 `
 
-const Brinquedo = ({ url, nome, valor, handleAddItem }) => {
+const Brinquedo = ({ url, nome, title, valor, handleAddItemToCart}) => {
    
     return(
         <CardBrinq>
             {/* <CardImg src={Pelucia} alt="Pelucia"/> */}
-            <CardImg src={url} alt="Pelucia"/>
-            <Nome>{nome}</Nome>
+            <CardImg src={url} alt="Pelucia"/> 
+            <h1>{title}</h1>
+            <Nome>{nome} </Nome>
             <Valor>{valor}</Valor>
-            <BotaoAdicionar onClick={() => handleAddItem (url, nome, valor)}>Adicionar</BotaoAdicionar>
+            <BotaoAdicionar onClick={() => handleAddItemToCart(url, nome, title, valor)}>Adicionar</BotaoAdicionar>
            
         </CardBrinq>
   
