@@ -21,10 +21,13 @@ const SectionCard = styled.section`
     align-itens: center;
     justify-content: space-between;
 
+    
+    flex-wrap: wrap;
+
 `
 
 
-const Card = ({handleAddItem}) => {
+const Card = ({handleAddItemToCart}) => {
 
     return (
         
@@ -34,8 +37,9 @@ const Card = ({handleAddItem}) => {
                     <Brinquedo 
                         url={produto.url} 
                         nome={produto.nome} 
+                        title={produto.title}
                         valor={produto.valor}
-                        handleAddItem={handleAddItem}
+                        handleAddItemToCart={handleAddItemToCart}
                     />
                 ))}
                           
