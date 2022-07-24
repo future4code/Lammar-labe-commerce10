@@ -1,14 +1,12 @@
+import React from 'react';
+import EcommerceFilter from "../src/components/filter/EcommerceFilter"
 import React, {useState} from 'react';
 import Card from './components/Card/Card';
 import RemoverItens from './components/RemoverItens/RemoverItens'
 import Header from './components/Header/Header';
-
 import Ordenacao from './Ordenacao/Ordenacao';
-
 import Header from './components/Header/Header';
-
-
-
+import './App.css';
 
 
 
@@ -33,7 +31,6 @@ function App() {
   return (
     <div className="App">
 
-      
     </div>
     
   );
