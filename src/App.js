@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Card from './components/Card/Card';
+import RemoverItens from './components/RemoverItens/RemoverItens'
+import Header from './components/Header/Header';
 
 import Ordenacao from './Ordenacao/Ordenacao';
 
@@ -10,25 +12,27 @@ import Header from './components/Header/Header';
 
 
 
-function App() {
-  
-const [cart, setCart] = useState ([])
-const [sortingParameter, setSortingParameter] = useState("nome")
 
-function handleAddItem (url, nome, valor) {
-  const itemBrinq = {url, nome, valor}
-  setCart(itemBrinq)
-  console.log([itemBrinq])
-}
+function App() {
+
+  const [cart, setCart] = useState ([])
+
+  function handleAddItemToCart(url, nome, valor, title){
+    const itemObject = {url, nome, valor, title}
+    setCart([...cart, itemObject])
+  }
+  
+
+
+
+// function handleAddItem (url, nome, valor) {
+//   const itemBrinq = {url, nome, valor}
+//   setCart(itemBrinq)
+// }
 
   return (
     <div className="App">
-      <Header/>
-      <Ordenacao
-        sortingParameter={sortingParameter}
-        setSortingParameter={setSortingParameter}
-      />
-      <Card handleAdicionarItem={handleAddItem} />
+
       
     </div>
     
