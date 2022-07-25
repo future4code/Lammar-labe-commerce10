@@ -1,6 +1,12 @@
 
+
 import React from "react";
 import styled from "styled-components";
+
+import React from "react";
+import styled from "styled-components";
+import LogoEc from './img/LogoECommerce.png';
+
 
 
 const HeaderView = styled.header`
@@ -19,7 +25,7 @@ const HeaderAbertura = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-        height: 100%;
+    height: 100%;
     padding: 10px;
     font-weight: normal;
 
@@ -32,6 +38,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 width: 40%;
+padding-top: 10px;
+width: 10%;
 background: blue;
 border-radius: .5rem;
 color: white;
@@ -46,9 +54,10 @@ const Header1 = () => {
     return(
     <HeaderView>
         <HeaderAbertura>
+
            <h1>LOGO</h1>
-            <h2>As melhores compras aqui!</h2>
-            <BotaoHeader>Log in</BotaoHeader>
+           <h2>As melhores compras aqui!</h2>
+           <BotaoHeader>Log in</BotaoHeader>
         </HeaderAbertura>
         <div>
             <h1>Filtros</h1>
@@ -60,7 +69,4 @@ const Header1 = () => {
 }
 
 export default Header1;
-
-
-
 

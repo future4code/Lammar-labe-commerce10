@@ -21,7 +21,6 @@ const SectionCard = styled.section`
     align-items: center;
     justify-content: space-between;
 
-   
 `
 
 
@@ -31,11 +30,29 @@ const Card = ({handleAddItem}) => {
         
         <Principal>
             <SectionCard>
-                {produtos.map((produto,index) => (
+                {produtos
+                .sort((currentProduto, nextProduto)=>{
+                    switch(sortingParameter){
+                        case "valor":
+                            return currentProduto.valor - nextProduto.valor
+                        default:
+                            return currentProduto.nome.localeCompare(nextProduto.nome)
+                    }
+                })
+                .sort(() => {
+                    if (order === "asc"){
+                        return 0
+                    } else{
+                        return -1
+                    }
+                })
+                .map((produto,index) => (
                     <Brinquedo 
                         url={produto.url} 
                         nome={produto.nome} 
                         // title={produto.title}
+
+
                         valor={produto.valor}
                         handleAddItem={handleAddItem}
                     />
@@ -48,6 +65,7 @@ const Card = ({handleAddItem}) => {
 }
 
 export default Card;
+
 
 
 

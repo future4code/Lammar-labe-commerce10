@@ -23,8 +23,6 @@ export function EcommerceFilter(props) {
          value={props.nomeProduto}
          onChange={(ev) => props.setNomeProduto(ev.target.value)}
         />
-
-   
     </StyledFilter>
 }
 

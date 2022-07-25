@@ -1,5 +1,6 @@
 
 
+
 export const produtos = [
     {url:"robo.jpg", nome: "Rc Robô Astronauta - programável e com sensor de gestos", valor: "R$ 296,00"},
     {url:"lego.jpg", nome:"Lego Estação Espacial Internacional", valor: "R$398,00"},
@@ -9,4 +10,6 @@ export const produtos = [
     {url:"barbieAstro.jpg", nome:"Barbie Profissão Astronauta", valor: "R$ 151,91"},
     
 ]
+
+
 

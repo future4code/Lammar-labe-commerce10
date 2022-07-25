@@ -63,16 +63,21 @@ const Brinquedo = ({ url, nome, valor, handleAddItemToCart}) => {
     return(
         <CardBrinq>
             <CardImg src={url} alt="Pelucia"/> 
+
             {/* <h1>{title}</h1> */}
             <Nome>{nome} </Nome>
             <Valor>{valor}</Valor>
             <BotaoAdicionar onClick={() => handleAddItemToCart(url, nome, valor)}>Adicionar</BotaoAdicionar>
            
+
+            <Nome>{nome} </Nome>
+            <Valor>{valor}</Valor>
+            <BotaoAdicionar onClick={() => handleAddItemToCart(url, nome, title, valor)}>Adicionar</BotaoAdicionar>
+
         </CardBrinq>
   
     )
 }
 
 export default Brinquedo;
-
 
