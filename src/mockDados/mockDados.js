@@ -1,5 +1,6 @@
 
 
+
 export const produtos = [
     {url:"robo.jpg", nome: "Rc Robô Astronauta - programável e com sensor de gestos", valor: "R$ 296,00"},
     {url:"lego.jpg", nome:"Lego Estação Espacial Internacional", valor: "R$398,00"},
@@ -10,9 +11,5 @@ export const produtos = [
     
 ]
 
-// import Robo from './img/robo';
-// import Lego from './img/lego';
-// import Sistema from './img/sistemaSolar';
-// import Fantasia from './img/fantasia';
-// import Pelucia from './img/pelucia';
-// import Barbie from './img/barbieAstro';
+
+

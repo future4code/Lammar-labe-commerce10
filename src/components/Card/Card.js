@@ -20,11 +20,11 @@ const SectionCard = styled.section`
     display: flex;
     align-items: center;
     justify-content: space-between;
- 
+
 `
 
 
-const Card = ({handleAddItemToCart}) => {
+const Card = ({handleAddItem}) => {
 
     return (
         
@@ -50,8 +50,11 @@ const Card = ({handleAddItemToCart}) => {
                     <Brinquedo 
                         url={produto.url} 
                         nome={produto.nome} 
+                        // title={produto.title}
+
+
                         valor={produto.valor}
-                        handleAddItemToCart={handleAddItemToCart}
+                        handleAddItem={handleAddItem}
                     />
                 ))}
                           
@@ -62,4 +65,8 @@ const Card = ({handleAddItemToCart}) => {
 }
 
 export default Card;
+
+
+
+
 

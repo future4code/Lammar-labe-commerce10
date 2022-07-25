@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 
-
 const BotaoAdicionar = styled.button`
     font-size: 20px;
     border: none;
@@ -21,10 +20,8 @@ const BotaoAdicionar = styled.button`
     margin-left: 15px;
     margin-bottom: 15px;
 
-    cursor: pointer;
-    
+       
 `
-
 
 const CardBrinq = styled.div`
 
@@ -61,21 +58,26 @@ const Valor = styled.h3`
     
 `
 
-const Brinquedo = ({ url, nome, title, valor, handleAddItemToCart}) => {
+const Brinquedo = ({ url, nome, valor, handleAddItemToCart}) => {
    
     return(
         <CardBrinq>
             <CardImg src={url} alt="Pelucia"/> 
+
+            {/* <h1>{title}</h1> */}
+            <Nome>{nome} </Nome>
+            <Valor>{valor}</Valor>
+            <BotaoAdicionar onClick={() => handleAddItemToCart(url, nome, valor)}>Adicionar</BotaoAdicionar>
+           
+
             <Nome>{nome} </Nome>
             <Valor>{valor}</Valor>
             <BotaoAdicionar onClick={() => handleAddItemToCart(url, nome, title, valor)}>Adicionar</BotaoAdicionar>
+
         </CardBrinq>
   
     )
 }
 
 export default Brinquedo;
-
-
-
 
