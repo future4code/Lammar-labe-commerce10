@@ -1,36 +1,48 @@
-import React from 'react';
-import EcommerceFilter from "../src/components/filter/EcommerceFilter"
+// import EcommerceFilter from "../src/components/filter/EcommerceFilter"
 import React, {useState} from 'react';
 import Card from './components/Card/Card';
-import RemoverItens from './components/RemoverItens/RemoverItens'
-import Header from './components/Header/Header';
+import styled from 'styled-components';
+// import RemoverItens from './components/RemoverItens/RemoverItens'
+
 import Ordenacao from './Ordenacao/Ordenacao';
-import Header from './components/Header/Header';
-import './App.css';
+import Header1 from './components/Header/Header';
 
 
+const DivApp = styled.div`
+  display: flex;
+  flex-direction: column;
+
+`
 
 
 function App() {
 
   const [cart, setCart] = useState ([])
+  const [sortingParameter, setSortingParameter] = useState("nome")
 
-  function handleAddItemToCart(url, nome, valor, title){
-    const itemObject = {url, nome, valor, title}
-    setCart([...cart, itemObject])
-  }
+
+
+  // function handleAddItemToCart(url, nome, valor, title){
+  //   const itemObject = {url, nome, valor, title}
+  //   setCart([...cart, itemObject])
+  // }
   
 
-
-// function handleAddItem (url, nome, valor) {
-//   const itemBrinq = {url, nome, valor}
-//   setCart(itemBrinq)
-// }
+function handleAddItem (url, nome, valor) {
+  const itemBrinq = {url, nome, valor}
+  setCart(itemBrinq)
+}
 
   return (
-    <div className="App">
-
-    </div>
+    <DivApp>
+      <Header1/>
+      <Ordenacao
+        sortingParameter={sortingParameter}
+        setSortingParameter={setSortingParameter}
+      />
+      <Card handleAdicionarItem={handleAddItem} />
+      
+    </DivApp>
     
   );
 }
@@ -41,28 +53,3 @@ export default App;
 
 
 
-// import React from 'react';
-// import Card from './components/Card/Card';
-
-
-// // import styled from 'styled-components';
-
-// import './App.css';
-// // import { produtos } from './mockDados';
-
-// function App() {
-  
-// // const [cart, setCart] = useState ([])
-
-//   return (
-//     <div className="App">
-
-//       <Card/>
-      
-//     </div>
-    
-//   );
-// }
-
-
-// export default App;

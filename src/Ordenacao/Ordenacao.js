@@ -14,7 +14,7 @@ const Seleciona = styled.select`
     color: darkblue;
     margin-left: 20px;
     font-size: 18px;
-
+    height: 30px;
 `
         
 
