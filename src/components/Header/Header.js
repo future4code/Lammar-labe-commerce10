@@ -3,11 +3,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import React from "react";
-import styled from "styled-components";
-import LogoEc from './img/LogoECommerce.png';
-
-
 
 const HeaderView = styled.header`
     display: flex;
@@ -31,23 +26,29 @@ const HeaderAbertura = styled.div`
 
 `
 
-const BotaoHeader = styled.button`
-font-size: 20px;
-border: none;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 40%;
-padding-top: 10px;
-width: 10%;
-background: blue;
-border-radius: .5rem;
-color: white;
-font-weight: bold;
-margin-top: 20px;
-margin-left: 15px;
-margin-bottom: 15px;
+// const BotaoHeader = styled.button`
+// font-size: 20px;
+// border: none;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// width: 40%;
+// padding-top: 10px;
+// width: 10%;
+// background: blue;
+// border-radius: .5rem;
+// color: white;
+// font-weight: bold;
+// margin-top: 20px;
+// margin-left: 15px;
+// margin-bottom: 15px;
+// `
+
+const LogoImg = styled.img`
+    width: 13%;
+
 `
+
 
 const Header1 = () => {
 
@@ -55,9 +56,9 @@ const Header1 = () => {
     <HeaderView>
         <HeaderAbertura>
 
-           <h1>LOGO</h1>
+           <LogoImg src="./logoEcommerce.png" alt="logo"/>
            <h2>As melhores compras aqui!</h2>
-           <BotaoHeader>Log in</BotaoHeader>
+           {/* <BotaoHeader>Log in</BotaoHeader> */}
         </HeaderAbertura>
         <div>
             <h1>Filtros</h1>

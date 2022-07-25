@@ -20,7 +20,6 @@ const Seleciona = styled.select`
 
 const Ordenacao = (props) => {
         
-              
     return (
         <OrderContainer>
             <label for="sortingParameter">Ordenar por:</label>
@@ -32,16 +31,15 @@ const Ordenacao = (props) => {
                 <option value={"nome"}>Nome</option>
                 <option value={"valor"}>Valor</option>
             </Seleciona>
-            <Seleciona
+            {/* <Seleciona
                 value={props.order}
                 onChange={ev=>{props.setOrder(ev.target.value)}}
             >
                 <option value={"asc"}>Crescente</option>
                 <option value={"desc"}>Decrescente</option>
             </Seleciona>
-            
+             */}
         </OrderContainer>
-
     )
 }
 
