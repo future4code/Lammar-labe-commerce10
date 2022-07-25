@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 
-
 const BotaoAdicionar = styled.button`
     font-size: 20px;
     border: none;
@@ -23,7 +22,6 @@ const BotaoAdicionar = styled.button`
 
        
 `
-
 
 const CardBrinq = styled.div`
 
@@ -76,4 +74,5 @@ const Brinquedo = ({ url, nome, valor, handleAddItemToCart}) => {
 }
 
 export default Brinquedo;
+
 

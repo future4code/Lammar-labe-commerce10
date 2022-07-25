@@ -1,7 +1,7 @@
 
 import React from "react";
 import styled from "styled-components";
-// import LogoEc from './img/LogoECommerce.png';
+
 
 const HeaderView = styled.header`
     display: flex;
@@ -31,7 +31,6 @@ border: none;
 display: flex;
 align-items: center;
 justify-content: center;
-/* padding-top: 10px; */
 width: 40%;
 background: blue;
 border-radius: .5rem;
